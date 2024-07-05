@@ -1,0 +1,57 @@
+.header__action--profile {
+    position: relative;
+    .header__navbar-user-menu {
+        transition: all 0.3s ease;
+        opacity: 0;
+        // display: none;
+        visibility: hidden;
+        border: 1px solid rgb(0 0 0 / 38%);
+        text-align: left;
+        top: calc(100% + 80%);
+        width: 180px;
+        right: 0;
+        padding: 0.5rem 1rem;
+        border-radius: 10px;
+        .header__navbar-user-item {
+            padding: 0.3rem 0;
+            a {
+                color: black;
+            }
+        }
+    }
+    .header__navbar-user-name {
+        display: none;
+    }
+    .btn__header__navbar-user-menu {
+        display: none;
+    }
+    .backdrop::after {
+        display: none;
+    }
+    .header__navbar-user-menu.active {
+        @extend .header__navbar-user-menu;
+        opacity: 1;
+        display: block;
+    }
+}
+
+.header__action--profile.active {
+    @extend .header__action--profile;
+    .header__navbar-user-menu {
+        @extend .header__navbar-user-menu;
+        opacity: 1;
+        // display: block;
+        visibility: visible;
+    }
+}
+
+.nav__menu {
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav__menu.active {
+    height: 100vh;
+    // overflow: hidden;
+}

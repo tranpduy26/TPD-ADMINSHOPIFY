@@ -1,0 +1,55 @@
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+    .form-control {
+        background: #fff;
+        border: 1px solid #d9d9d9;
+        box-sizing: border-box;
+        border-radius: 16px;
+        height: 40px;
+        width: 100%;
+        padding: 5px 20px;
+        transition: all .2s;
+    }
+    small {
+        margin-left: 20px;
+        // display: none;
+    }
+}
+
+.dropdown {
+    width: 100%;
+    position: relative;
+    user-select: none;
+    .dropdown-btn {
+        padding-left: 10px;
+        font-weight: 700;
+    }
+    .dropdown-content {
+        background-color: white;
+        width: 100%;
+        position: absolute;
+        top: 137%;
+        left: -1px;
+        border-top: none;
+        overflow: scroll;
+        transition: all 0.3s ease;
+        height: 0;
+        max-height: 10rem;
+        .dropdown-item {
+            padding-left: 10px;
+            cursor: pointer;
+            padding: 10px 10px;
+            &:hover {
+                background-color: #f4f4f4;
+            }
+        }
+    }
+}
+
+.dropdown-content {
+    &.active {
+        height: 10rem;
+        border: 1px solid rgba(0, 0, 0, 0.404);
+    }
+}

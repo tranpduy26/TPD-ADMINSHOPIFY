@@ -1,0 +1,56 @@
+@import './sidebar';
+@media screen and (max-width: 640px) {
+    .login__container {
+        transform: none;
+    }
+    .sidebar {
+        &.active {
+            width: 55px;
+            background: white;
+            border-right: 1px solid black;
+            overflow: hidden;
+            &~.home-section {
+                width: calc(100% - 55px)!important;
+                left: 55px;
+                nav {
+                    width: calc(100% - 55px)!important;
+                    left: 55px!important;
+                }
+            }
+        }
+    }
+    .home-section {
+        background-color: white;
+        position: relative;
+        min-height: 100vh;
+        width: calc(100% - 55px)!important;
+        left: 55px!important;
+        transition: all 0.3s ease;
+        nav {
+            transition: all 0.3s ease;
+            position: fixed;
+            background-color: white;
+            width: calc(100% - 55px)!important;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.329);
+            z-index: 10;
+        }
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .login__container {
+        transform: translate(-50%, -50%);
+    }
+    .register__container {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1280px) {}
+
+@media screen and (min-width: 1440px) {}
